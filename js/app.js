@@ -50,6 +50,15 @@ var Player = function() {
 
 Player.prototype.update = function(dt) {
     //if left key is pressed:
+    if(this.pressedKey === 'left' && this.x > 0) { //player isn't on edge
+        this.x = this.x - 50;
+    }
+
+    //if right key is pressed:
+
+    //if up key is pressed:
+
+    //if down key is pressed:
 };
 
 Player.prototype.render = function() {
@@ -58,7 +67,7 @@ Player.prototype.render = function() {
 
 //handleInput() method for player:
 Player.prototype.handleInput = function(e) {
-    this.ctlKey = e;
+    this.pressedKey = e;
 }
 
 //Reset player to beginning position
