@@ -1,4 +1,4 @@
-// Enemies our player must avoid
+// **** ENEMY Class ****
 var Enemy = function(x,y) {
     // The image/sprite for our enemies, this uses
     // a helper we've provided to easily load images
@@ -19,7 +19,7 @@ Enemy.prototype.update = function(dt) {
     // You should multiply any movement by the dt parameter
     // which will ensure the game runs at the same speed for
     // all computers.
-    if(this.x <= 600){
+    if(this.x <= 505) {  //canvas.width = 505
         this.x = this.x + this.speed * dt;
     } else {
         this.x = -2;
@@ -39,7 +39,7 @@ Enemy.prototype.render = function() {
     ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
 };
 
-// Player class
+// **** PLAYER class ****
 // This class requires an update(), render() and
 // a handleInput() method.
 var Player = function() {
@@ -50,15 +50,24 @@ var Player = function() {
 
 Player.prototype.update = function(dt) {
     //if left key is pressed:
-    if(this.pressedKey === 'left' && this.x > 0) { //player isn't on edge
-        this.x = this.x - 50;
+    if(this.pressedKey === 'left' && this.x > 0) { //player isn't on left edge
+        this.x = this.x - 100;
     }
 
     //if right key is pressed:
+    if(this.pressedKey === 'right' && this.x < 400) { //player isn't on right edge
+        this.x = this.x + 100;
+    }
 
     //if up key is pressed:
+    if(this.pressedKey === 'up' && this.y > 0) {
+        this.y = this.y - 90;
+    }
 
     //if down key is pressed:
+
+    //this will make player jump only once when key is pressed:
+    this.pressedKey = null;
 };
 
 Player.prototype.render = function() {
