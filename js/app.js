@@ -65,6 +65,9 @@ Player.prototype.update = function(dt) {
     }
 
     //if down key is pressed:
+    if(this.pressedKey === 'down' && this.y < 400) {
+        this.y = this.y + 90;
+    }
 
     //this will make player jump only once when key is pressed:
     this.pressedKey = null;
