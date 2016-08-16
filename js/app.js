@@ -43,7 +43,7 @@ Enemy.prototype.render = function() {
 // This class requires an update(), render() and
 // a handleInput() method.
 var Player = function() {
-    this.sprite = 'images/char-boy.png';
+    this.sprite = 'images/char-cat-girl.png';
     this.x = 200;
     this.y = 400;
 };
@@ -71,6 +71,11 @@ Player.prototype.update = function(dt) {
 
     //this will make player jump only once when key is pressed:
     this.pressedKey = null;
+
+    //if player reaches water, position reset:
+    if(this.y < 0) {
+        this.reset();
+    }
 };
 
 Player.prototype.render = function() {
@@ -80,7 +85,7 @@ Player.prototype.render = function() {
 //handleInput() method for player:
 Player.prototype.handleInput = function(e) {
     this.pressedKey = e;
-}
+};
 
 //Reset player to beginning position
 Player.prototype.reset = function() {
