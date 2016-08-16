@@ -41,6 +41,7 @@ var Player = function() {
 };
 
 Player.prototype.update = function(dt) {
+    var self = this;
     //if left key is pressed:
     if(this.pressedKey === 'left' && this.x > 0) { //player isn't on left edge
         this.x = this.x - 100;
@@ -69,13 +70,13 @@ Player.prototype.update = function(dt) {
         this.reset();
     }
 
-    //collision: if player comes within 25px of enemy's x and y coordinates,
-    //game will reset:
-    if(this.x >= Enemy.x - 25 && this.x <= Enemy.x + 25) {
-        if(this.y >= Enemy.y - 25 && this.y <= Enemy.y + 25) {
-            this.reset();
+    allEnemies.forEach(function(enemy) {
+    if(self.x >= enemy.x - 25 && self.x <= enemy.x + 25) {
+        if(self.y >= enemy.y - 25 && self.y <= enemy.y + 25) {
+            self.reset();
+            }
         }
-    }
+    });
 };
 
 Player.prototype.render = function() {
