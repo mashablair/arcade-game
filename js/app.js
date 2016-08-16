@@ -24,14 +24,6 @@ Enemy.prototype.update = function(dt) {
     } else {
         this.x = -2;
     }
-
-    //collision: if player comes within 25px of enemy's x and y coordinates,
-    //game will reset:
-    if(player.x >= this.x - 25 && player.x <= this.x + 25) {
-        if(player.y >= this.y - 25 && player.y <= this.y + 25) {
-            this.reset();
-        }
-    }
 };
 
 // Draw the enemy on the screen, required method for game
@@ -75,6 +67,14 @@ Player.prototype.update = function(dt) {
     //if player reaches water, position reset:
     if(this.y < 0) {
         this.reset();
+    }
+
+    //collision: if player comes within 25px of enemy's x and y coordinates,
+    //game will reset:
+    if(this.x >= Enemy.x - 25 && this.x <= Enemy.x + 25) {
+        if(this.y >= Enemy.y - 25 && this.y <= Enemy.y + 25) {
+            this.reset();
+        }
     }
 };
 
