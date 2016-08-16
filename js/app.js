@@ -49,12 +49,17 @@ var Player = function() {
 };
 
 Player.prototype.update = function(dt) {
-
+    //if left key is pressed:
 };
 
 Player.prototype.render = function() {
     ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
 };
+
+//handleInput() method for player:
+Player.prototype.handleInput = function(e) {
+    this.ctlKey = e;
+}
 
 //Reset player to beginning position
 Player.prototype.reset = function() {
