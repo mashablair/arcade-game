@@ -4,10 +4,47 @@
     <meta charset="UTF-8">
     <title>Game: Frogger</title>
     <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,300" rel="stylesheet">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1:1">
 </head>
 <body>
-    <script src="js/resources.js"></script>
-    <script src="js/app.js"></script>
-    <script src="js/engine.js"></script>
+    <div class="container">
+            <header id="header">
+                <div id="link-buttons">
+                    <a href="https://github.com/mashablair/arcade-game">
+                        <div id="github-button">
+                            <p id="button-text">GitHub</p>
+                        </div>
+                    </a>
+                    <a href="https://mashablair.github.io/frontend-nanodegree-resume/">
+                        <div id="portfolio-button">
+                            <p id="button-text">Portfolio</p>
+                        </div>
+                    </a>
+                </div>
+                <h1 id="page-title">Arcade Game Demo</h1>
+            </header>
+            <div id="main">
+                <aside id="info-bar">
+                    <div id="project-description">
+                        <h3>What is this?</h3>
+                        <p>This game is my 5th project for the <a href="http://www.udacity.com">Udacity's</a> Front-End Web Dev nanodgree. The goal is to create a classic arcage frogger game using the newly acquired skills in Object Oriented JS and HTML5 Canvas. Images and a game loop engine are provided. The rest should be built in app.js file!</p>
+                    </div>
+                    <div id="game-instructions">
+                        <h3>How to Play</h3>
+                        <p>Use the arrow keys to move the player across the board. To win you need to reach water, avoiding the bugs.</p>
+                    </div>
+                </aside>
+                <div id="game">
+                        <script src="js/resources.js"></script>
+                        <script src="js/app.js"></script>
+                        <script src="js/engine.js"></script>
+                </div>
+            </div>
+        </div>
+
+<!-- ****This loads the game: ****  -->
+
 </body>
 </html>
