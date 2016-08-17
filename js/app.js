@@ -1,5 +1,6 @@
 // **** ENEMY Class ****
 var Enemy = function(x,y) {
+    'use strict';
     // The image/sprite for our enemies, this uses
     // a helper we've provided to easily load images
     this.sprite = 'images/enemy-bug.png';
@@ -16,6 +17,7 @@ var Enemy = function(x,y) {
 // Update the enemy's position, required method for game
 // Parameter: dt, a time delta between ticks
 Enemy.prototype.update = function(dt) {
+    'use strict';
     // You should multiply any movement by the dt parameter
     // which will ensure the game runs at the same speed for
     // all computers.
@@ -35,12 +37,15 @@ Enemy.prototype.render = function() {
 // This class requires an update(), render() and
 // a handleInput() method.
 var Player = function() {
+    'use strict';
     this.sprite = 'images/char-cat-girl.png';
     this.x = 200;
     this.y = 400;
 };
 
 Player.prototype.update = function(dt) {
+    'use strict';
+
     var self = this;
     //if left key is pressed:
     if(this.pressedKey === 'left' && this.x > 0) { //player isn't on left edge
@@ -80,18 +85,21 @@ Player.prototype.update = function(dt) {
 };
 
 Player.prototype.render = function() {
+    'use strict';
     ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
 };
 
 //handleInput() method for player:
 Player.prototype.handleInput = function(e) {
+    'use strict';
     this.pressedKey = e;
 };
 
 //Reset player to beginning position
 Player.prototype.reset = function() {
-  this.x = 200;
-  this.y = 400;
+    'use strict';
+   this.x = 200;
+   this.y = 400;
 };
 
 
@@ -100,6 +108,7 @@ var allEnemies = []; //creates an array of Enemies
 
 //this function will DISPLAY Enemies:
 (function displayEnemies() {
+    'use strict';
     allEnemies.push(new Enemy(0, 50));
     allEnemies.push(new Enemy(0, 140));
     allEnemies.push(new Enemy(0, 230));
