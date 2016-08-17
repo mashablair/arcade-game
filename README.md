@@ -11,4 +11,8 @@ Click [here](https://mashablair.github.io/arcade-game/) to open the game.
 
 Use the arrow keys (up, down, left, right) to move the player across the board. Reaching the water is a win, colliding with a bug is a lose.
 
+##Here is how the game should look like:  
+
+![alt tag](https://github.com/mashablair/arcade-game/blob/master/Screen%20Shot%202016-08-17%20at%2012.18.40%20PM.png)
+
 ##Enjoy it!  :smile:
