@@ -32,7 +32,7 @@ h3 {
 }
 
 #link-buttons {
-    width: 50%;
+    width: 40%;
 }
 
 #button-text {
@@ -52,7 +52,8 @@ h3 {
 }
 
 #page-title {
-    width: 50%;
+    width: 60%;
+    text-align: left;
 }
 
 #main {
@@ -71,6 +72,7 @@ h3 {
     width: auto;
     background-color: #ddd;
     margin: 10px;
+    width: 40%;
 }
 
 #project-description,
