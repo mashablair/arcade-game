@@ -9,7 +9,7 @@ This game is my 5th project for the Udaicty Front-End Web Dev nanodgree.  The go
 
 Click [here](https://mashablair.github.io/arcade-game/) to open the game.
 
-Use the arrow keys (up, down, left, right) to move the player across the board. Reaching the water is a win, colliding with a bug is a lose.
+Use the arrow keys to move the player across the board. To win you need to reach water, but avoid colliding with the bugs.
 
 ##Here is how the game should look like:  
 
