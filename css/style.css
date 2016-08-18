@@ -14,7 +14,9 @@ body {
     font-family: 'Lato', sans-serif;
 }
 
-h1,
+h1 {
+    font-family: 'Indie Flower', cursive;
+}
 h3 {
     font-family: 'Lato', sans-serif;
 }
@@ -71,13 +73,14 @@ h3 {
 #info-bar {
     width: auto;
     background-color: #ddd;
-    margin: 10px;
+    margin-top: 10px;
     width: 40%;
 }
 
 #project-description,
 #game-instructions {
     padding: 30px;
+    font-size: 20px;
 }
 
 #project-description {
